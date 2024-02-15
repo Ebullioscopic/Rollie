@@ -17,3 +17,6 @@ for results in results_generator:
         print(f"Class Name: {names[int(cls)]}, Confidence Score: {conf}, Bounding Box: {box}")
         #output coordinates are given in the form of (x,y) of left top and width, height of bounding box
         #replace xywh with xyxy to get left top and right bottom coords
+        #rects = [(int(x), int(y), int(x + w), int(y + h)) for (x, y, w, h) in rects]
+        #rects = detector.detectMultiScale(image, scaleFactor=1.1, minNeighbors=5,
+            #minSize=(30, 30), flags = cv2.CASCADE_SCALE_IMAGE)
